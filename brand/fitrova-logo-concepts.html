@@ -1,0 +1,301 @@
+<title>Fitrova Logo Concepts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Marcellus&family=Outfit:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@500&display=swap">
+<style>
+/* Layout: a presentation board — intro, four concept panels (hero tile + reverse tile + applications), then the decision panel. */
+:root{
+  --bg:#F7F8F6; --surface:#FFFFFF; --fg:#16201D; --muted:#5B6863; --line:#DCE2DF; --accent:#0E5A4B;
+  --display:"Cormorant Garamond", Georgia, serif;
+  --sans:"Outfit", "Segoe UI", system-ui, sans-serif;
+  --caps:"Marcellus", Georgia, serif;
+  --arabic:"Noto Naskh Arabic", "Geeza Pro", serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0F1513; --surface:#161E1B; --fg:#E9EEEC; --muted:#9AA8A3; --line:#26312D; --accent:#6CC3A8; color-scheme:dark } }
+:root[data-theme="dark"]{ --bg:#0F1513; --surface:#161E1B; --fg:#E9EEEC; --muted:#9AA8A3; --line:#26312D; --accent:#6CC3A8; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.55}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:48px 72px;display:flex;flex-direction:column;gap:56px}
+header{display:grid;gap:14px;max-width:760px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(40px,7vw,68px);line-height:1;margin:0;text-wrap:balance}
+h1 .ar{font-family:var(--arabic);font-size:.55em;color:var(--accent);margin-inline-start:.3em;font-weight:500}
+header p{margin:0;color:var(--muted);max-width:62ch}
+.meaning{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:14px}
+.meaning b{color:var(--fg);font-weight:500}
+
+.concept{display:grid;gap:20px;border-top:1px solid var(--line);padding-top:28px}
+.chead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}
+.chead h2{font-family:var(--display);font-size:34px;font-weight:600;margin:0}
+.chead .tag{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.board{display:grid;grid-template-columns:1.35fr 1fr;gap:14px}
+.side{display:grid;grid-template-rows:1fr auto;gap:14px;min-width:0}
+.tile{--p:#000;--s:#888;--bgc:#fff;--ink:#000;background:var(--bgc);color:var(--ink);border-radius:6px;display:flex;align-items:center;justify-content:center;padding:36px 20px;min-height:260px;border:1px solid var(--line);min-width:0}
+.apps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.app{border:1px solid var(--line);border-radius:6px;background:var(--surface);padding:14px 10px 10px;display:grid;justify-items:center;gap:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-width:0}
+.icon{--p:#000;--s:#888;--bgc:#fff;width:64px;height:64px;border-radius:15px;background:var(--bgc);display:grid;place-items:center}
+.icon svg{width:42px;height:42px}
+.badge{--p:#000;--s:#888;--bgc:#fff;width:64px;height:64px;border-radius:50%;background:var(--bgc);display:grid;place-items:center;box-shadow:inset 0 0 0 3px var(--s),inset 0 0 0 6px var(--bgc),inset 0 0 0 7px var(--s)}
+.badge svg{width:34px;height:34px}
+.sign{--p:#000;--s:#888;--bgc:#fff;--ink:#fff;width:100%;height:64px;border-radius:3px;background:var(--bgc);color:var(--ink);display:flex;align-items:center;justify-content:center;gap:8px;padding:0 8px}
+.sign svg{width:26px;height:26px;flex:none}
+.sign span{font-size:13px;letter-spacing:.12em;text-transform:none}
+
+.p{fill:var(--p)} .s{fill:var(--s)} .bgf{fill:var(--bgc)}
+.pst{fill:none;stroke:var(--p)} .sst{fill:none;stroke:var(--s)}
+
+.lockup{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.lockup.row{flex-direction:row;gap:18px;text-align:start}
+.lockup svg.mark{width:110px;height:110px;flex:none}
+.lockup.row svg.mark{width:78px;height:78px}
+.wm-a{font-family:var(--sans);font-weight:500;font-size:clamp(34px,5vw,46px);letter-spacing:.01em;line-height:1;color:var(--ink)}
+.wm-b{font-family:var(--caps);font-size:clamp(28px,4.4vw,40px);letter-spacing:.22em;line-height:1;color:var(--ink);padding-left:.22em}
+.wm-c{font-family:var(--display);font-weight:600;font-size:clamp(38px,5.6vw,52px);line-height:.95;color:var(--ink)}
+.sub{font-family:var(--sans);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--ink);opacity:.75;padding-left:.32em}
+.motto{font-family:var(--caps);font-size:11px;letter-spacing:.3em;color:var(--sc,var(--ink));padding-left:.3em}
+.wm-d{display:flex;align-items:center;font-family:var(--sans);font-weight:600;font-size:clamp(38px,6.5vw,62px);letter-spacing:.14em;line-height:1;color:var(--ink)}
+.wm-d svg{width:.82em;height:.82em;margin:0 .14em 0 .02em}
+.wm-d .tail{letter-spacing:.14em}
+
+.notes{display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:start}
+.notes p{margin:0 0 8px;max-width:64ch}
+.notes .why{color:var(--muted);font-size:15px}
+.chips{display:grid;gap:8px}
+.chip{display:flex;align-items:center;gap:10px;font-size:13px}
+.chip i{width:28px;height:28px;border-radius:4px;border:1px solid var(--line);flex:none}
+.chip code{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--muted)}
+
+.decide{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:28px max(20px,3vw);display:grid;gap:14px}
+.decide h2{font-family:var(--display);font-size:32px;margin:0;font-weight:600}
+.decide ol{margin:0;padding-left:1.2em;display:grid;gap:8px;max-width:70ch}
+.decide .fine{font-size:13px;color:var(--muted);margin:0;max-width:75ch}
+
+@media (max-width:820px){
+  .board,.notes{grid-template-columns:1fr}
+  .lockup.row{flex-direction:column;text-align:center}
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- A: The Fitrah Seed — stem + two leaves form an F; cupped arc beneath = nurture -->
+    <symbol id="mA" viewBox="0 0 100 100">
+      <path class="pst" d="M20 70 Q50 100 80 70" stroke-width="7" stroke-linecap="round"/>
+      <rect class="p" x="44" y="22" width="9" height="62" rx="4.5"/>
+      <path class="s" d="M53 30 C59 13 78 8 89 11 C85 26 70 35 53 30 Z"/>
+      <path class="s" d="M53 53 C57 42 70 37 79 39 C76 49 66 56 53 53 Z"/>
+    </symbol>
+    <!-- B: Heritage Crest — shield, eight-point star (khatam), open book -->
+    <symbol id="mB" viewBox="0 0 100 104">
+      <path class="p" d="M50 4 L90 14 L90 52 C90 77 71 92 50 100 C29 92 10 77 10 52 L10 14 Z"/>
+      <path class="sst" stroke-width="1.6" d="M50 11 L83 19.5 L83 52 C83 72 67 85 50 92 C33 85 17 72 17 52 L17 19.5 Z"/>
+      <g class="s">
+        <rect x="39" y="23" width="22" height="22"/>
+        <rect x="39" y="23" width="22" height="22" transform="rotate(45 50 34)"/>
+      </g>
+      <circle class="p" cx="50" cy="34" r="6.5"/>
+      <path class="s" d="M28 59 Q39 53 49 59 L49 79 Q39 73 28 79 Z"/>
+      <path class="s" d="M51 59 Q61 53 72 59 L72 79 Q61 73 51 79 Z"/>
+    </symbol>
+    <!-- C: The Open Arch — a doorway with light rising inside -->
+    <symbol id="mC" viewBox="0 0 100 100">
+      <path class="pst" stroke-width="5" stroke-linejoin="round" d="M22 94 L22 48 C22 27 37 15 50 6 C63 15 78 27 78 48 L78 94"/>
+      <line class="pst" x1="12" y1="94" x2="88" y2="94" stroke-width="5" stroke-linecap="round"/>
+      <path class="s" d="M32 94 A18 18 0 0 1 68 94 Z"/>
+      <g class="sst" stroke-width="4" stroke-linecap="round">
+        <line x1="36.8" y1="75.2" x2="32.2" y2="68.6"/>
+        <line x1="50" y1="71" x2="50" y2="62"/>
+        <line x1="63.2" y1="75.2" x2="67.8" y2="68.6"/>
+      </g>
+      <g class="s">
+        <rect x="45.5" y="27.5" width="9" height="9"/>
+        <rect x="45.5" y="27.5" width="9" height="9" transform="rotate(45 50 32)"/>
+      </g>
+    </symbol>
+    <!-- D: Star-O — eight-point star set inside the O of the wordmark -->
+    <symbol id="mD" viewBox="0 0 100 100">
+      <circle class="pst" cx="50" cy="50" r="43" stroke-width="12"/>
+      <g class="s">
+        <rect x="33" y="33" width="34" height="34"/>
+        <rect x="33" y="33" width="34" height="34" transform="rotate(45 50 50)"/>
+      </g>
+      <circle class="bgf" cx="50" cy="50" r="8"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Brand identity · Logo sketches · Round 1</span>
+    <h1>Fitrova <span class="ar" lang="ar">فطرة</span></h1>
+    <p>Four directions for the new Cambridge school in Faisalabad. Each one is shown as the main logo, reversed on its brand colour, and on three real uses: the app icon, the blazer badge and the gate sign.</p>
+    <div class="meaning">
+      <span><b>Fitrah</b> · the pure nature every child is born with</span>
+      <span><b>-ova</b> · new, renewal</span>
+      <span><b>Promise</b> · bringing out the best already inside every child</span>
+    </div>
+  </header>
+
+  <!-- CONCEPT A -->
+  <section class="concept" aria-labelledby="cA">
+    <div class="chead"><h2 id="cA">A · The Fitrah Seed</h2><span class="tag">Modern · warm · growth</span></div>
+    <div class="board">
+      <div class="tile" style="--p:#0E5A4B;--s:#C9A24A;--bgc:#FFFFFF;--ink:#0E5A4B">
+        <div class="lockup">
+          <svg class="mark" aria-hidden="true"><use href="#mA"/></svg>
+          <div class="wm-a">fitrova</div>
+          <div class="sub">School · Faisalabad</div>
+        </div>
+      </div>
+      <div class="side">
+        <div class="tile" style="--p:#F4F7F5;--s:#D9B663;--bgc:#0E5A4B;--ink:#F4F7F5;min-height:180px">
+          <div class="lockup row">
+            <svg class="mark" aria-hidden="true"><use href="#mA"/></svg>
+            <div><div class="wm-a">fitrova</div><div class="sub" style="padding-left:0;margin-top:8px">School</div></div>
+          </div>
+        </div>
+        <div class="apps">
+          <div class="app"><div class="icon" style="--p:#F4F7F5;--s:#D9B663;--bgc:#0E5A4B"><svg aria-hidden="true"><use href="#mA"/></svg></div>App icon</div>
+          <div class="app"><div class="badge" style="--p:#0E5A4B;--s:#C9A24A;--bgc:#F4F7F5"><svg aria-hidden="true"><use href="#mA"/></svg></div>Blazer badge</div>
+          <div class="app"><div class="sign" style="--p:#F4F7F5;--s:#D9B663;--bgc:#0E5A4B;--ink:#F4F7F5"><svg aria-hidden="true"><use href="#mA"/></svg><span style="font-family:var(--sans);font-weight:500;font-size:17px;letter-spacing:.02em">fitrova</span></div>Gate sign</div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      <div>
+        <p>The stem and two leaves form a hidden <b>F</b>. They grow out of a cupped curve, like two hands holding a seedling: the school nurtures what Allah already placed in the child.</p>
+        <p class="why">Best for: approachable, family-friendly image; strong on social media and with mothers. Feels like a modern international school (similar register to the newer UAE schools).</p>
+      </div>
+      <div class="chips">
+        <div class="chip"><i style="background:#0E5A4B"></i>Fitrah Emerald <code>#0E5A4B</code></div>
+        <div class="chip"><i style="background:#C9A24A"></i>Harvest Gold <code>#C9A24A</code></div>
+        <div class="chip"><i style="background:#F4F7F5"></i>Mist <code>#F4F7F5</code></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEPT B -->
+  <section class="concept" aria-labelledby="cB">
+    <div class="chead"><h2 id="cB">B · The Heritage Crest</h2><span class="tag">Classic · prestigious · British-school</span></div>
+    <div class="board">
+      <div class="tile" style="--p:#14284B;--s:#B8913A;--bgc:#FFFFFF;--ink:#14284B;--sc:#B8913A">
+        <div class="lockup">
+          <svg class="mark" viewBox="0 0 100 104" style="height:120px" aria-hidden="true"><use href="#mB"/></svg>
+          <div class="wm-b">FITROVA</div>
+          <div class="motto">ADAB · ILM · IHSAN</div>
+        </div>
+      </div>
+      <div class="side">
+        <div class="tile" style="--p:#B8913A;--s:#14284B;--bgc:#14284B;--ink:#F3EFE6;--sc:#D4B064;min-height:180px">
+          <div class="lockup row">
+            <svg class="mark" viewBox="0 0 100 104" aria-hidden="true" style="--p:#D4B064;--s:#14284B"><use href="#mB"/></svg>
+            <div><div class="wm-b" style="font-size:30px">FITROVA</div><div class="motto" style="padding-left:0;margin-top:10px">EST. 2027 · FAISALABAD</div></div>
+          </div>
+        </div>
+        <div class="apps">
+          <div class="app"><div class="icon" style="--p:#D4B064;--s:#14284B;--bgc:#14284B"><svg viewBox="0 0 100 104" aria-hidden="true"><use href="#mB"/></svg></div>App icon</div>
+          <div class="app"><div class="badge" style="--p:#14284B;--s:#B8913A;--bgc:#F3EFE6"><svg viewBox="0 0 100 104" aria-hidden="true"><use href="#mB"/></svg></div>Blazer badge</div>
+          <div class="app"><div class="sign" style="--p:#D4B064;--s:#14284B;--bgc:#14284B;--ink:#F3EFE6"><svg viewBox="0 0 100 104" aria-hidden="true"><use href="#mB"/></svg><span style="font-family:var(--caps);letter-spacing:.2em">FITROVA</span></div>Gate sign</div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      <div>
+        <p>A shield in Oxford navy carries the <b>eight-point star</b> (khatam, the classic Islamic geometric star) above an <b>open book</b>. The motto names three values: Adab, Ilm and Ihsan.</p>
+        <p class="why">Best for: the "world-class, established" impression that justifies a PKR 15–25k fee. Sits naturally next to the crests of Aitchison, LGS and Beaconhouse. Easy to embroider on blazers, ties and sports kits.</p>
+      </div>
+      <div class="chips">
+        <div class="chip"><i style="background:#14284B"></i>Oxford Navy <code>#14284B</code></div>
+        <div class="chip"><i style="background:#B8913A"></i>Antique Gold <code>#B8913A</code></div>
+        <div class="chip"><i style="background:#F3EFE6"></i>Parchment <code>#F3EFE6</code></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEPT C -->
+  <section class="concept" aria-labelledby="cC">
+    <div class="chead"><h2 id="cC">C · The Open Arch</h2><span class="tag">Architectural · elegant · calm</span></div>
+    <div class="board">
+      <div class="tile" style="--p:#0B3B4A;--s:#E0963A;--bgc:#FFFFFF;--ink:#0B3B4A">
+        <div class="lockup">
+          <svg class="mark" aria-hidden="true"><use href="#mC"/></svg>
+          <div class="wm-c">Fitrova</div>
+          <div class="sub">School</div>
+        </div>
+      </div>
+      <div class="side">
+        <div class="tile" style="--p:#EAF1F2;--s:#F0A848;--bgc:#0B3B4A;--ink:#EAF1F2;min-height:180px">
+          <div class="lockup row">
+            <svg class="mark" aria-hidden="true"><use href="#mC"/></svg>
+            <div><div class="wm-c" style="font-size:44px">Fitrova</div><div class="sub" style="padding-left:0;margin-top:8px">School · Faisalabad</div></div>
+          </div>
+        </div>
+        <div class="apps">
+          <div class="app"><div class="icon" style="--p:#EAF1F2;--s:#F0A848;--bgc:#0B3B4A"><svg aria-hidden="true"><use href="#mC"/></svg></div>App icon</div>
+          <div class="app"><div class="badge" style="--p:#0B3B4A;--s:#E0963A;--bgc:#EAF1F2"><svg aria-hidden="true"><use href="#mC"/></svg></div>Blazer badge</div>
+          <div class="app"><div class="sign" style="--p:#EAF1F2;--s:#F0A848;--bgc:#0B3B4A;--ink:#EAF1F2"><svg aria-hidden="true"><use href="#mC"/></svg><span style="font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:.02em">Fitrova</span></div>Gate sign</div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      <div>
+        <p>A pointed arch, the doorway of classical Islamic architecture, with a <b>rising sun</b> inside and a small star above it. The message: an open door to light and learning. It reads as "Islamic heritage" without being religious-looking.</p>
+        <p class="why">Best for: a calm, premium, design-led image. Works beautifully as a building feature: the actual school gate or reception wall can be shaped like the logo.</p>
+      </div>
+      <div class="chips">
+        <div class="chip"><i style="background:#0B3B4A"></i>Deep Teal <code>#0B3B4A</code></div>
+        <div class="chip"><i style="background:#E0963A"></i>Sunrise Amber <code>#E0963A</code></div>
+        <div class="chip"><i style="background:#EAF1F2"></i>Morning <code>#EAF1F2</code></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEPT D -->
+  <section class="concept" aria-labelledby="cD">
+    <div class="chead"><h2 id="cD">D · The Star-O Wordmark</h2><span class="tag">Bold · contemporary · minimal</span></div>
+    <div class="board">
+      <div class="tile" style="--p:#1B2430;--s:#1F8A70;--bgc:#FFFFFF;--ink:#1B2430">
+        <div class="lockup">
+          <div class="wm-d"><span>FITR</span><svg aria-hidden="true"><use href="#mD"/></svg><span class="tail">VA</span></div>
+          <div class="sub">School · Faisalabad</div>
+        </div>
+      </div>
+      <div class="side">
+        <div class="tile" style="--p:#FFFFFF;--s:#2FBF97;--bgc:#1B2430;--ink:#FFFFFF;min-height:180px">
+          <div class="lockup">
+            <div class="wm-d" style="font-size:44px"><span>FITR</span><svg aria-hidden="true"><use href="#mD"/></svg><span class="tail">VA</span></div>
+          </div>
+        </div>
+        <div class="apps">
+          <div class="app"><div class="icon" style="--p:#FFFFFF;--s:#2FBF97;--bgc:#1B2430"><svg aria-hidden="true"><use href="#mD"/></svg></div>App icon</div>
+          <div class="app"><div class="badge" style="--p:#1B2430;--s:#1F8A70;--bgc:#FFFFFF"><svg aria-hidden="true"><use href="#mD"/></svg></div>Blazer badge</div>
+          <div class="app"><div class="sign" style="--p:#FFFFFF;--s:#2FBF97;--bgc:#1B2430;--ink:#FFFFFF"><span class="wm-d" style="font-size:18px"><span>FITR</span><svg aria-hidden="true"><use href="#mD"/></svg><span class="tail">VA</span></span></div>Gate sign</div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      <div>
+        <p>The name itself is the logo. The <b>O</b> becomes an eight-point star inside a circle, and the star alone becomes the icon. No crest, no illustration.</p>
+        <p class="why">Best for: a sleek, tech-forward, "future-ready" school image that stands out from every crest in Faisalabad. Less traditional; some parents may find it less "school-like".</p>
+      </div>
+      <div class="chips">
+        <div class="chip"><i style="background:#1B2430"></i>Ink <code>#1B2430</code></div>
+        <div class="chip"><i style="background:#1F8A70"></i>Jade <code>#1F8A70</code></div>
+        <div class="chip"><i style="background:#FFFFFF"></i>White <code>#FFFFFF</code></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="decide" aria-labelledby="dec">
+    <h2 id="dec">Your decision</h2>
+    <ol>
+      <li><b>Pick one direction</b> (A, B, C or D), or a mix, e.g. "the crest shape from B with the colours of A".</li>
+      <li><b>Tell me what to change</b>: colours, the motto words, the font style, or anything that doesn't feel right.</li>
+      <li>After you approve, I refine the chosen logo into a final master and build the full design system: colour rules, fonts, uniform, stationery, signage and social templates.</li>
+    </ol>
+    <p class="fine">These are concept sketches to choose a direction. The final logo will be redrawn precisely and delivered as vector files (SVG, PDF, PNG) for print, embroidery and digital use. "Est. 2027" is a placeholder for your launch year.</p>
+  </section>
+</div>
