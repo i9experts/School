@@ -1,0 +1,329 @@
+<title>Adabury Logo Concepts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Marcellus&family=Outfit:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@500&display=swap">
+<style>
+/* Layout: a presentation board — intro, four concept panels (hero tile + reverse tile + applications), then the decision panel. */
+:root{
+  --bg:#F7F8F6; --surface:#FFFFFF; --fg:#16201D; --muted:#5B6863; --line:#DCE2DF; --accent:#6E1F2F;
+  --display:"Cormorant Garamond", Georgia, serif;
+  --sans:"Outfit", "Segoe UI", system-ui, sans-serif;
+  --caps:"Marcellus", Georgia, serif;
+  --arabic:"Noto Naskh Arabic", "Geeza Pro", serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0F1513; --surface:#161E1B; --fg:#E9EEEC; --muted:#9AA8A3; --line:#26312D; --accent:#D9A0AC; color-scheme:dark } }
+:root[data-theme="dark"]{ --bg:#0F1513; --surface:#161E1B; --fg:#E9EEEC; --muted:#9AA8A3; --line:#26312D; --accent:#D9A0AC; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.55}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:48px 72px;display:flex;flex-direction:column;gap:56px}
+header{display:grid;gap:14px;max-width:760px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(40px,7vw,68px);line-height:1;margin:0;text-wrap:balance}
+h1 .ar{font-family:var(--arabic);font-size:.55em;color:var(--accent);margin-inline-start:.3em;font-weight:500}
+header p{margin:0;color:var(--muted);max-width:62ch}
+.meaning{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:14px}
+.meaning b{color:var(--fg);font-weight:500}
+
+.concept{display:grid;gap:20px;border-top:1px solid var(--line);padding-top:28px}
+.chead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}
+.chead h2{font-family:var(--display);font-size:34px;font-weight:600;margin:0}
+.chead .tag{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.board{display:grid;grid-template-columns:1.35fr 1fr;gap:14px}
+.side{display:grid;grid-template-rows:1fr auto;gap:14px;min-width:0}
+.tile{--p:#000;--s:#888;--bgc:#fff;--ink:#000;background:var(--bgc);color:var(--ink);border-radius:6px;display:flex;align-items:center;justify-content:center;padding:36px 20px;min-height:260px;border:1px solid var(--line);min-width:0}
+.apps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.app{border:1px solid var(--line);border-radius:6px;background:var(--surface);padding:14px 10px 10px;display:grid;justify-items:center;gap:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-width:0}
+.icon{--p:#000;--s:#888;--bgc:#fff;width:64px;height:64px;border-radius:15px;background:var(--bgc);display:grid;place-items:center}
+.icon svg{width:42px;height:42px}
+.badge{--p:#000;--s:#888;--bgc:#fff;width:64px;height:64px;border-radius:50%;background:var(--bgc);display:grid;place-items:center;box-shadow:inset 0 0 0 3px var(--s),inset 0 0 0 6px var(--bgc),inset 0 0 0 7px var(--s)}
+.badge svg{width:34px;height:34px}
+.sign{--p:#000;--s:#888;--bgc:#fff;--ink:#fff;width:100%;height:64px;border-radius:3px;background:var(--bgc);color:var(--ink);display:flex;align-items:center;justify-content:center;gap:8px;padding:0 8px}
+.sign svg{width:26px;height:26px;flex:none}
+.sign span{font-size:13px;letter-spacing:.12em;text-transform:none}
+
+.p{fill:var(--p)} .s{fill:var(--s)} .bgf{fill:var(--bgc)}
+.pst{fill:none;stroke:var(--p)} .sst{fill:none;stroke:var(--s)}
+
+.lockup{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.lockup.row{flex-direction:row;gap:18px;text-align:start}
+.lockup svg.mark{width:110px;height:110px;flex:none}
+.lockup.row svg.mark{width:78px;height:78px}
+.wm-a{font-family:var(--sans);font-weight:500;font-size:clamp(34px,5vw,46px);letter-spacing:.01em;line-height:1;color:var(--ink)}
+.wm-b{font-family:var(--caps);font-size:clamp(28px,4.4vw,40px);letter-spacing:.22em;line-height:1;color:var(--ink);padding-left:.22em}
+.wm-c{font-family:var(--display);font-weight:600;font-size:clamp(38px,5.6vw,52px);line-height:.95;color:var(--ink)}
+.sub{font-family:var(--sans);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--ink);opacity:.75;padding-left:.32em}
+.motto{font-family:var(--caps);font-size:11px;letter-spacing:.3em;color:var(--sc,var(--ink));padding-left:.3em}
+.wm-d{display:flex;align-items:center;font-family:var(--sans);font-weight:600;font-size:clamp(38px,6.5vw,62px);letter-spacing:.14em;line-height:1;color:var(--ink)}
+.wm-d svg{width:.82em;height:.82em;margin:0 .14em 0 .02em}
+.wm-d .tail{letter-spacing:.14em}
+
+.notes{display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:start}
+.notes p{margin:0 0 8px;max-width:64ch}
+.notes .why{color:var(--muted);font-size:15px}
+.chips{display:grid;gap:8px}
+.chip{display:flex;align-items:center;gap:10px;font-size:13px}
+.chip i{width:28px;height:28px;border-radius:4px;border:1px solid var(--line);flex:none}
+.chip code{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--muted)}
+
+.decide{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:28px max(20px,3vw);display:grid;gap:14px}
+.decide h2{font-family:var(--display);font-size:32px;margin:0;font-weight:600}
+.decide ol{margin:0;padding-left:1.2em;display:grid;gap:8px;max-width:70ch}
+.decide .fine{font-size:13px;color:var(--muted);margin:0;max-width:75ch}
+
+@media (max-width:820px){
+  .board,.notes{grid-template-columns:1fr}
+  .lockup.row{flex-direction:column;text-align:center}
+}
+.sig{display:flex;flex-direction:column;align-items:center;gap:0}
+.wm-sig{font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(46px,7vw,68px);line-height:1;color:var(--ink)}
+.swash{width:min(240px,70%);height:26px;margin-top:-4px}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- A: Adabury Crest — shield, chevron, eight-point star, olive sprig -->
+    <symbol id="aA" viewBox="0 0 100 104">
+      <path class="p" d="M50 4 L90 14 L90 52 C90 77 71 92 50 100 C29 92 10 77 10 52 L10 14 Z"/>
+      <path class="sst" stroke-width="1.6" d="M50 11 L83 19.5 L83 52 C83 72 67 85 50 92 C33 85 17 72 17 52 L17 19.5 Z"/>
+      <g class="s">
+        <rect x="42" y="19" width="16" height="16"/>
+        <rect x="42" y="19" width="16" height="16" transform="rotate(45 50 27)"/>
+      </g>
+      <circle class="p" cx="50" cy="27" r="4.5"/>
+      <polygon class="s" points="17,58 50,42 83,58 83,66 50,50 17,66"/>
+      <line class="sst" x1="50" y1="88" x2="50" y2="64" stroke-width="2.2" stroke-linecap="round"/>
+      <g class="s">
+        <ellipse cx="44.5" cy="82" rx="6" ry="2.6" transform="rotate(-35 44.5 82)"/>
+        <ellipse cx="55.5" cy="82" rx="6" ry="2.6" transform="rotate(35 55.5 82)"/>
+        <ellipse cx="44.5" cy="74" rx="6" ry="2.6" transform="rotate(-35 44.5 74)"/>
+        <ellipse cx="55.5" cy="74" rx="6" ry="2.6" transform="rotate(35 55.5 74)"/>
+        <ellipse cx="50" cy="64" rx="2.6" ry="5.5"/>
+      </g>
+    </symbol>
+    <!-- B: arch-shaped A monogram (used alone and inside the seal) -->
+    <symbol id="aB" viewBox="0 0 100 100">
+      <path class="pst" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" d="M28 90 L28 52 C28 33 41 20 50 12 C59 20 72 33 72 52 L72 90"/>
+      <line class="pst" x1="28" y1="62" x2="72" y2="62" stroke-width="6"/>
+      <g class="s">
+        <rect x="45" y="35" width="10" height="10"/>
+        <rect x="45" y="35" width="10" height="10" transform="rotate(45 50 40)"/>
+      </g>
+    </symbol>
+    <!-- B: the full seal -->
+    <symbol id="aSeal" viewBox="0 0 120 120">
+      <path id="sealPath" fill="none" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/>
+      <circle class="p" cx="60" cy="60" r="58"/>
+      <circle class="sst" cx="60" cy="60" r="54" stroke-width="1.2"/>
+      <circle class="sst" cx="60" cy="60" r="36" stroke-width="1.2"/>
+      <text class="s" font-family="Marcellus, Georgia, serif" font-size="8.4" letter-spacing="1.2">
+        <textPath href="#sealPath" textLength="276" lengthAdjust="spacing">ADABURY SCHOOL · FAISALABAD · EST. 2027 ·</textPath>
+      </text>
+      <g transform="translate(36 36) scale(.48)" style="--p:var(--s)"><use href="#aB"/></g>
+    </symbol>
+    <!-- C: The Lantern (fanoos) — light of knowledge, arch window -->
+    <symbol id="aC" viewBox="0 0 100 110">
+      <circle class="pst" cx="50" cy="8" r="4.5" stroke-width="3"/>
+      <path class="p" d="M40 24 L60 24 L55 13 L45 13 Z"/>
+      <path class="p" d="M34 26 L66 26 L77 54 L66 88 L34 88 L23 54 Z"/>
+      <path class="s" d="M41 81 L41 53 C41 45 46 40 50 36 C54 40 59 45 59 53 L59 81 Z"/>
+      <path class="p" d="M50 74 C45.5 68 46.5 62 50 56 C53.5 62 54.5 68 50 74 Z"/>
+      <rect class="p" x="37" y="90" width="26" height="6" rx="1"/>
+      <path class="p" d="M45 97 L55 97 L50 106 Z"/>
+    </symbol>
+    <!-- D: star for the signature wordmark and icon -->
+    <symbol id="aD" viewBox="0 0 100 100">
+      <circle class="pst" cx="50" cy="50" r="44" stroke-width="5"/>
+      <g class="s">
+        <rect x="31" y="31" width="38" height="38"/>
+        <rect x="31" y="31" width="38" height="38" transform="rotate(45 50 50)"/>
+      </g>
+      <circle class="bgf" cx="50" cy="50" r="7"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Brand identity · Logo sketches · Round 1</span>
+    <h1>Adabury <span class="ar" lang="ar">أدب</span></h1>
+    <p>Four directions for the new Cambridge school in Faisalabad. Each one is shown as the main logo, reversed on its brand colour, and on three real uses: the app icon, the blazer badge and the gate sign.</p>
+    <div class="meaning">
+      <span><b>Adab</b> · manners, refinement, good character</span>
+      <span><b>-bury</b> · the ending of old English school towns</span>
+      <span><b>Promise</b> · a place where character is the first lesson</span>
+    </div>
+  </header>
+
+  <!-- CONCEPT A -->
+  <section class="concept" aria-labelledby="cA">
+    <div class="chead"><h2 id="cA">A · The Adabury Crest</h2><span class="tag">Classic · prestigious · British-school</span></div>
+    <div class="board">
+      <div class="tile" style="--p:#6E1F2F;--s:#C2A15A;--bgc:#FFFFFF;--ink:#6E1F2F;--sc:#A8843E">
+        <div class="lockup">
+          <svg class="mark" viewBox="0 0 100 104" style="height:120px" aria-hidden="true"><use href="#aA"/></svg>
+          <div class="wm-b">ADABURY</div>
+          <div class="motto">CHARACTER · KNOWLEDGE · EXCELLENCE</div>
+        </div>
+      </div>
+      <div class="side">
+        <div class="tile" style="--p:#C9A962;--s:#6E1F2F;--bgc:#6E1F2F;--ink:#F5EEE6;--sc:#D7BB7A;min-height:180px">
+          <div class="lockup row">
+            <svg class="mark" viewBox="0 0 100 104" aria-hidden="true"><use href="#aA"/></svg>
+            <div><div class="wm-b" style="font-size:30px">ADABURY</div><div class="motto" style="padding-left:0;margin-top:10px">EST. 2027 · FAISALABAD</div></div>
+          </div>
+        </div>
+        <div class="apps">
+          <div class="app"><div class="icon" style="--p:#C9A962;--s:#6E1F2F;--bgc:#6E1F2F"><svg viewBox="0 0 100 104" aria-hidden="true"><use href="#aA"/></svg></div>App icon</div>
+          <div class="app"><div class="badge" style="--p:#6E1F2F;--s:#C2A15A;--bgc:#F5EEE6"><svg viewBox="0 0 100 104" aria-hidden="true"><use href="#aA"/></svg></div>Blazer badge</div>
+          <div class="app"><div class="sign" style="--p:#C9A962;--s:#6E1F2F;--bgc:#6E1F2F;--ink:#F5EEE6"><svg viewBox="0 0 100 104" aria-hidden="true"><use href="#aA"/></svg><span style="font-family:var(--caps);letter-spacing:.2em">ADABURY</span></div>Gate sign</div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      <div>
+        <p>A claret shield with an <b>eight-point star</b> (faith and Islamic heritage), a <b>chevron</b> (a roof: the school as a home and shelter) and an <b>olive sprig</b> (the blessed tree of Surah An-Nur, and growth).</p>
+        <p class="why">Best for: the strongest "established British school" look. Claret and gold are traditional colours of English public schools and look rich on blazers, ties and gates.</p>
+      </div>
+      <div class="chips">
+        <div class="chip"><i style="background:#6E1F2F"></i>Adabury Claret <code>#6E1F2F</code></div>
+        <div class="chip"><i style="background:#C2A15A"></i>Old Gold <code>#C2A15A</code></div>
+        <div class="chip"><i style="background:#F5EEE6"></i>Linen <code>#F5EEE6</code></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEPT B -->
+  <section class="concept" aria-labelledby="cB">
+    <div class="chead"><h2 id="cB">B · The Arch Seal</h2><span class="tag">Heritage · official · timeless</span></div>
+    <div class="board">
+      <div class="tile" style="--p:#1E3D2F;--s:#C4A35A;--bgc:#FFFFFF;--ink:#1E3D2F">
+        <div class="lockup">
+          <svg class="mark" viewBox="0 0 120 120" style="width:200px;height:200px" aria-hidden="true"><use href="#aSeal"/></svg>
+        </div>
+      </div>
+      <div class="side">
+        <div class="tile" style="--p:#F2EFE6;--s:#C4A35A;--bgc:#1E3D2F;--ink:#F2EFE6;min-height:180px">
+          <div class="lockup row">
+            <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#aB"/></svg>
+            <div><div class="wm-c" style="font-size:44px">Adabury</div><div class="sub" style="padding-left:0;margin-top:8px">School · Faisalabad</div></div>
+          </div>
+        </div>
+        <div class="apps">
+          <div class="app"><div class="icon" style="--p:#F2EFE6;--s:#C4A35A;--bgc:#1E3D2F"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#aB"/></svg></div>App icon</div>
+          <div class="app"><div class="badge" style="--p:#1E3D2F;--s:#C4A35A;--bgc:#F2EFE6"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#aB"/></svg></div>Blazer badge</div>
+          <div class="app"><div class="sign" style="--p:#F2EFE6;--s:#C4A35A;--bgc:#1E3D2F;--ink:#F2EFE6"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#aB"/></svg><span style="font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:.02em">Adabury</span></div>Gate sign</div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      <div>
+        <p>The letter <b>A</b> is drawn as an Islamic pointed arch, with a small star inside it. The A sits in a round seal with the school's name, city and founding year, like the seal of an old university.</p>
+        <p class="why">Best for: certificates, report cards, the school stamp and the main gate. The arch-A works alone as a clean modern icon, so one system covers both heritage and digital use.</p>
+      </div>
+      <div class="chips">
+        <div class="chip"><i style="background:#1E3D2F"></i>Bottle Green <code>#1E3D2F</code></div>
+        <div class="chip"><i style="background:#C4A35A"></i>Brass <code>#C4A35A</code></div>
+        <div class="chip"><i style="background:#F2EFE6"></i>Vellum <code>#F2EFE6</code></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEPT C -->
+  <section class="concept" aria-labelledby="cC">
+    <div class="chead"><h2 id="cC">C · The Lantern</h2><span class="tag">Warm · symbolic · distinctive</span></div>
+    <div class="board">
+      <div class="tile" style="--p:#182A4A;--s:#E2B04A;--bgc:#FFFFFF;--ink:#182A4A">
+        <div class="lockup">
+          <svg class="mark" viewBox="0 0 100 110" style="height:120px" aria-hidden="true"><use href="#aC"/></svg>
+          <div class="wm-c">Adabury</div>
+          <div class="sub">School</div>
+        </div>
+      </div>
+      <div class="side">
+        <div class="tile" style="--p:#EEF1F6;--s:#E2B04A;--bgc:#182A4A;--ink:#EEF1F6;min-height:180px">
+          <div class="lockup row">
+            <svg class="mark" viewBox="0 0 100 110" aria-hidden="true" style="--p:#EEF1F6"><use href="#aC"/></svg>
+            <div><div class="wm-c" style="font-size:44px">Adabury</div><div class="sub" style="padding-left:0;margin-top:8px">School · Faisalabad</div></div>
+          </div>
+        </div>
+        <div class="apps">
+          <div class="app"><div class="icon" style="--p:#EEF1F6;--s:#E2B04A;--bgc:#182A4A"><svg viewBox="0 0 100 110" aria-hidden="true"><use href="#aC"/></svg></div>App icon</div>
+          <div class="app"><div class="badge" style="--p:#182A4A;--s:#E2B04A;--bgc:#EEF1F6"><svg viewBox="0 0 100 110" aria-hidden="true"><use href="#aC"/></svg></div>Blazer badge</div>
+          <div class="app"><div class="sign" style="--p:#EEF1F6;--s:#E2B04A;--bgc:#182A4A;--ink:#EEF1F6"><svg viewBox="0 0 100 110" aria-hidden="true"><use href="#aC"/></svg><span style="font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:.02em">Adabury</span></div>Gate sign</div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      <div>
+        <p>A traditional <b>fanoos lantern</b> with an arch-shaped window and a flame inside: the light of knowledge, carried with good manners. The lantern recalls Ramadan evenings and old Lahore and Cairo streets without using any religious text.</p>
+        <p class="why">Best for: a warm, memorable symbol that no other Faisalabad school uses. Lights up well at night as gate signage and suits annual events ("Lantern Day" for the graduating class).</p>
+      </div>
+      <div class="chips">
+        <div class="chip"><i style="background:#182A4A"></i>Midnight <code>#182A4A</code></div>
+        <div class="chip"><i style="background:#E2B04A"></i>Lantern Gold <code>#E2B04A</code></div>
+        <div class="chip"><i style="background:#EEF1F6"></i>Moonlight <code>#EEF1F6</code></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEPT D -->
+  <section class="concept" aria-labelledby="cD">
+    <div class="chead"><h2 id="cD">D · The Signature</h2><span class="tag">Refined · modern · understated</span></div>
+    <div class="board">
+      <div class="tile" style="--p:#20302E;--s:#2A7F78;--bgc:#FFFFFF;--ink:#20302E">
+        <div class="lockup">
+          <div class="sig">
+            <div class="wm-sig">Adabury</div>
+            <svg class="swash" viewBox="0 0 220 24" aria-hidden="true">
+              <path class="sst" d="M6 14 Q90 4 186 12" stroke-width="2.4" stroke-linecap="round"/>
+              <g transform="translate(192 3) scale(.18)"><use href="#aD" width="100" height="100"/></g>
+            </svg>
+          </div>
+          <div class="sub">School · Faisalabad</div>
+        </div>
+      </div>
+      <div class="side">
+        <div class="tile" style="--p:#F1F5F4;--s:#3FB3A8;--bgc:#20302E;--ink:#F1F5F4;min-height:180px">
+          <div class="lockup">
+            <div class="sig">
+              <div class="wm-sig" style="font-size:52px">Adabury</div>
+              <svg class="swash" viewBox="0 0 220 24" aria-hidden="true">
+                <path class="sst" d="M6 14 Q90 4 186 12" stroke-width="2.4" stroke-linecap="round"/>
+                <g transform="translate(192 3) scale(.18)"><use href="#aD" width="100" height="100"/></g>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="apps">
+          <div class="app"><div class="icon" style="--p:#F1F5F4;--s:#3FB3A8;--bgc:#20302E"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#aD"/></svg></div>App icon</div>
+          <div class="app"><div class="badge" style="--p:#20302E;--s:#2A7F78;--bgc:#F1F5F4"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#aD"/></svg></div>Blazer badge</div>
+          <div class="app"><div class="sign" style="--p:#F1F5F4;--s:#3FB3A8;--bgc:#20302E;--ink:#F1F5F4"><span class="wm-sig" style="font-size:24px">Adabury</span></div>Gate sign</div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      <div>
+        <p>An elegant italic wordmark, like a handwritten signature, underlined with a single stroke that ends in an <b>eight-point star</b>. The star alone is the icon.</p>
+        <p class="why">Best for: a boutique, premium feel, like a luxury brand. It's the most minimal option and relies on beautiful execution. It is the least "school crest", so some parents may read it as less traditional.</p>
+      </div>
+      <div class="chips">
+        <div class="chip"><i style="background:#20302E"></i>Slate Ink <code>#20302E</code></div>
+        <div class="chip"><i style="background:#2A7F78"></i>Deep Teal <code>#2A7F78</code></div>
+        <div class="chip"><i style="background:#F1F5F4"></i>Frost <code>#F1F5F4</code></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="decide" aria-labelledby="dec">
+    <h2 id="dec">Your decision</h2>
+    <ol>
+      <li><b>Choose the name</b>: Adabury or Fitrova (the Fitrova sketches are on the separate page).</li>
+      <li><b>Pick one direction</b> (A, B, C or D), or a mix, e.g. "the crest from A with the arch-A from B on the badge".</li>
+      <li><b>Tell me what to change</b>: colours, the motto words, the font style.</li>
+    </ol>
+    <p class="fine">These are concept sketches to choose a direction. The final logo will be redrawn precisely and delivered as vector files (SVG, PDF, PNG) for print, embroidery and digital use. "Est. 2027" is a placeholder for your launch year.</p>
+  </section>
+</div>
