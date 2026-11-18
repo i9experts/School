@@ -1,0 +1,172 @@
+<title>Adabury Social Templates</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Marcellus&family=Outfit:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: a template wall (posts, story, covers) grouped by format, then the posting playbook (pillars, rhythm, voice, photo rules) and approval. */
+:root{
+  --bg:#FAF8F5; --surface:#FFFFFF; --fg:#2A1418; --muted:#6F5F60; --line:#E6DEDA; --accent:#6E1F2F; --chip:#F3ECE4;
+  --display:"Cormorant Garamond", Georgia, serif; --sans:"Outfit","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#140C0E; --surface:#1E1416; --fg:#F2E9E6; --muted:#B4A3A3; --line:#3A2A2D; --accent:#E2BE76; --chip:#2A1D20; color-scheme:dark } }
+:root[data-theme="dark"]{ --bg:#140C0E; --surface:#1E1416; --fg:#F2E9E6; --muted:#B4A3A3; --line:#3A2A2D; --accent:#E2BE76; --chip:#2A1D20; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.55}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 72px;display:flex;flex-direction:column;gap:56px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(38px,6vw,60px);line-height:1.02;margin:6px 0 10px}
+h2{font-family:var(--display);font-weight:600;font-size:32px;margin:0 0 6px}
+h3{margin:10px 0 0;font-size:16px;font-weight:500}
+.lede{color:var(--muted);max-width:70ch;margin:0}
+section > .lede{margin-bottom:22px}
+.grid{display:grid;gap:22px;align-items:start}
+.posts{grid-template-columns:repeat(3,1fr)}
+.wide{grid-template-columns:1.5fr 1fr}
+.t{display:grid;gap:2px;min-width:0}
+.t button{all:unset;cursor:zoom-in;display:block;border-radius:6px;overflow:hidden;box-shadow:0 1px 2px rgba(42,20,24,.1),0 10px 24px rgba(42,20,24,.12)}
+.t button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.t img{width:100%;height:auto;display:block}
+.t .sz{font-size:12.5px;color:var(--accent)}
+.t p{margin:2px 0 0;font-size:14px;color:var(--muted)}
+.storyrow{display:grid;grid-template-columns:minmax(0,280px) 1fr;gap:28px;align-items:start}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px;display:grid;gap:6px;align-content:start}
+.card b{font-weight:500}
+.card p{margin:0;font-size:14px;color:var(--muted)}
+.card .f{font-size:12.5px;color:var(--accent)}
+.week{border:1px solid var(--line);border-radius:6px;overflow-x:auto;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:14px}
+th,td{padding:10px 16px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.rule{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:20px}
+.rule h3{margin:0 0 8px}
+.rule ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14.5px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{background:var(--chip);border-radius:99px;padding:5px 12px;font-size:13.5px}
+.note{font-size:13px;color:var(--muted);max-width:86ch;margin:0}
+.decide{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:28px max(20px,3vw);display:grid;gap:12px}
+.decide ol{margin:0;padding-left:1.2em;display:grid;gap:8px;max-width:78ch}
+dialog{border:none;padding:0;background:transparent;max-width:96vw;max-height:94vh}
+dialog::backdrop{background:rgba(20,10,12,.88)}
+dialog img{max-width:100%;max-height:90vh;display:block;border-radius:6px}
+dialog .x{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.55);color:#fff;border:none;border-radius:99px;width:36px;height:36px;font-size:20px;cursor:pointer}
+@media (max-width:960px){ .posts{grid-template-columns:1fr 1fr} .wide,.storyrow,.rules{grid-template-columns:1fr} .cards{grid-template-columns:1fr 1fr} }
+@media (max-width:520px){ .posts,.cards{grid-template-columns:1fr} }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Adabury School · Design system · Social media</span>
+    <h1>Adabury social templates</h1>
+    <p class="lede">Eight ready-made templates at the exact sizes each platform needs, plus a simple playbook so every post looks and sounds like Adabury. Text in [square brackets] is replaced for each post.</p>
+  </header>
+
+  <section aria-labelledby="p">
+    <h2 id="p">Feed posts</h2>
+    <p class="lede">For Instagram and Facebook. Portrait (4:5) posts take up the most screen space in the feed, so they are used for the most important messages.</p>
+    <div class="grid posts">
+      <div class="t"><button type="button" data-full="social/web/01-post-admissions.jpg"><img src="social/web/01-post-admissions.jpg" alt="Admissions open post with group photo, claret panel, Urdu tagline and phone number" width="700" height="875"></button><h3>Admissions open</h3><span class="sz">1080 × 1350 · portrait</span><p>The main admissions post. Pin it to the top of the profile from January to April.</p></div>
+      <div class="t"><button type="button" data-full="social/web/03-post-achievement.jpg"><img src="social/web/03-post-achievement.jpg" alt="Achievement post with student photo in a gold frame, Mabrook heading and achievement line" width="700" height="875"></button><h3>Student achievement</h3><span class="sz">1080 × 1350 · portrait</span><p>"Mabrook!" posts for exams, competitions, Hifz milestones and sports wins.</p></div>
+      <div class="t"><button type="button" data-full="social/web/02-post-value-of-month.jpg"><img src="social/web/02-post-value-of-month.jpg" alt="Value of the month post: Adab, with Urdu, a short meaning and Quran verse Al-Baqarah 2:83" width="900" height="900"></button><h3>Value of the month</h3><span class="sz">1080 × 1080 · square</span><p>One value each month (Adab, Amanah, Ihsan and the rest) with its meaning and a short Quran verse.</p></div>
+      <div class="t"><button type="button" data-full="social/web/04-post-event.jpg"><img src="social/web/04-post-event.jpg" alt="Event invitation post with student photo and claret panel listing date, time and venue" width="900" height="900"></button><h3>Event invitation</h3><span class="sz">1080 × 1080 · square</span><p>Sports day, open day, parent-teacher meetings, prize-giving, Quran competitions.</p></div>
+      <div class="t"><button type="button" data-full="social/web/05-post-notice.jpg"><img src="social/web/05-post-notice.jpg" alt="Bilingual notice post on linen background announcing a holiday in English and Urdu" width="900" height="900"></button><h3>Notice to parents</h3><span class="sz">1080 × 1080 · square</span><p>Holidays, timing changes and reminders, in English and Urdu. The same image goes to the WhatsApp parent groups.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s">
+    <h2 id="s">Stories and WhatsApp status</h2>
+    <div class="storyrow">
+      <div class="t"><button type="button" data-full="social/web/06-story-admissions.jpg"><img src="social/web/06-story-admissions.jpg" alt="Vertical admissions story with logo band, student photo and Book a campus visit button" width="700" height="1244"></button><h3>Admissions story</h3><span class="sz">1080 × 1920 · 9:16</span></div>
+      <div>
+        <p class="lede" style="margin-bottom:14px">One vertical design serves Instagram and Facebook stories, WhatsApp status and TikTok covers. Keep the important text away from the top and bottom 250 px, where app buttons cover the screen.</p>
+        <p class="lede">In Pakistan, WhatsApp is where parents actually read school news. Staff should post this story to the school's WhatsApp Business status every week during admissions season.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="c">
+    <h2 id="c">Covers and video</h2>
+    <div class="grid wide">
+      <div class="t"><button type="button" data-full="social/web/07-facebook-cover.jpg"><img src="social/web/07-facebook-cover.jpg" alt="Facebook cover with logo, Character comes first and group photo" width="900" height="342"></button><h3>Facebook cover</h3><span class="sz">1640 × 624</span><p>The logo sits clear of the profile picture, which covers the bottom-left corner.</p></div>
+      <div class="t"><button type="button" data-full="social/web/08-youtube-thumbnail.jpg"><img src="social/web/08-youtube-thumbnail.jpg" alt="YouTube thumbnail with crest, video title and group photo" width="900" height="506"></button><h3>YouTube thumbnail</h3><span class="sz">1280 × 720</span><p>For campus tours, principal's messages, event highlights. Title in three to five words.</p></div>
+    </div>
+    <p class="note" style="margin-top:16px">Profile picture on every platform: the official app icon (crest on claret), already in <code>brand/logo/</code>.</p>
+  </section>
+
+  <section aria-labelledby="pl">
+    <h2 id="pl">The posting playbook</h2>
+    <p class="lede">Four content pillars, so the page shows the whole school, not only adverts.</p>
+    <div class="cards">
+      <div class="card"><span class="f">About 35% of posts</span><b>Character in action</b><p>Value of the month, kindness stories, community service, Quran and Seerah moments.</p></div>
+      <div class="card"><span class="f">About 30%</span><b>Academic excellence</b><p>Cambridge results, olympiads, science fairs, reading challenges, teacher spotlights.</p></div>
+      <div class="card"><span class="f">About 20%</span><b>School life</b><p>Sports, trips, assemblies, house events, a day in a classroom.</p></div>
+      <div class="card"><span class="f">About 15%</span><b>Admissions and notices</b><p>Open days, deadlines, fee and timing notices, holidays.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="wk">
+    <h2 id="wk">A typical week</h2>
+    <div class="week"><table>
+      <thead><tr><th>Day</th><th>Post</th><th>Template</th></tr></thead>
+      <tbody>
+        <tr><td>Monday</td><td>Value of the month: one short reminder or story</td><td>Value of the month</td></tr>
+        <tr><td>Wednesday</td><td>Classroom or academic highlight (photo or reel)</td><td>Achievement, or a plain photo with the logo corner</td></tr>
+        <tr><td>Friday</td><td>Jumu'ah greeting or short Quran reflection</td><td>Value of the month (square)</td></tr>
+        <tr><td>As needed</td><td>Notices, events, admissions</td><td>Notice · Event · Admissions</td></tr>
+        <tr><td>Every day in admissions season</td><td>Status update to parents and prospects</td><td>Admissions story</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section aria-labelledby="r">
+    <h2 id="r">Rules for every post</h2>
+    <div class="rules">
+      <div class="rule"><h3>Voice</h3><ul>
+        <li>Warm, confident and respectful. Write as a principal speaks to parents, never as an advert.</li>
+        <li>Use English for the main text, with Urdu for key lines and notices.</li>
+        <li>Open with Assalamu alaikum in messages to parents. Use "Mabrook" for congratulations.</li>
+        <li>Never compare Adabury with other schools by name.</li>
+      </ul></div>
+      <div class="rule"><h3>Photos of students</h3><ul>
+        <li>Get written parental consent at admission for using photos, with an opt-out list kept at the front office.</li>
+        <li>Girls appear only in full uniform with the school hijab.</li>
+        <li>Never post a child's full name with their photo except for achievements, and then only with consent.</li>
+        <li>Replace the AI sample photos with real school photography before launch.</li>
+      </ul></div>
+      <div class="rule"><h3>Design</h3><ul>
+        <li>Use only these templates, the official colours and the four official fonts.</li>
+        <li>The crest or the logo appears on every image.</li>
+        <li>Text covers no more than about a fifth of a photo.</li>
+      </ul></div>
+      <div class="rule"><h3>Hashtags and handles</h3>
+        <div class="tags"><span>#AdaburySchool</span><span>#CharacterComesFirst</span><span>#AdabPehlaQareenaHai</span><span>#FaisalabadSchools</span><span>#CambridgeSchool</span></div>
+        <p class="note" style="margin-top:10px">Proposed handle: @adaburyschool on Instagram, Facebook, YouTube and TikTok. Reserve it on every platform now, even before launch.</p>
+      </div>
+    </div>
+  </section>
+
+  <p class="note">The photos in these templates are the AI-generated uniform visualisations, used only as placeholders. Each template is saved as a ready image in <code>brand/social/png/</code>. The source files in <code>brand/social/</code> can be regenerated with new text, or the layout can be rebuilt in Canva for the admin team.</p>
+
+  <section class="decide" aria-labelledby="ap">
+    <h2 id="ap">Your approval</h2>
+    <ol>
+      <li><b>Templates</b>: approve the eight designs, or tell me what to change.</li>
+      <li><b>Handle</b>: is @adaburyschool acceptable? I can check whether it is free on each platform.</li>
+      <li><b>Next step</b>: with the brand complete, I will start the academic model, governance board and Faisalabad business and financial feasibility.</li>
+    </ol>
+  </section>
+</div>
+
+<dialog id="zoom" aria-label="Template preview"><button class="x" type="button" aria-label="Close">×</button><img alt=""></dialog>
+<script>
+(() => {
+  const dlg = document.getElementById('zoom'), img = dlg.querySelector('img');
+  document.querySelectorAll('button[data-full]').forEach(b => b.addEventListener('click', () => {
+    img.src = b.dataset.full; img.alt = b.querySelector('img').alt; if (dlg.showModal) dlg.showModal();
+  }));
+  dlg.querySelector('.x').addEventListener('click', () => dlg.close());
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+})();
+</script>
