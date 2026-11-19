@@ -1,0 +1,1253 @@
+{
+ "workstreams": [
+  {
+   "id": "strategy",
+   "name": "Strategy and funding"
+  },
+  {
+   "id": "legal",
+   "name": "Legal and governance"
+  },
+  {
+   "id": "site",
+   "name": "Site and building"
+  },
+  {
+   "id": "reg",
+   "name": "Registration and accreditation"
+  },
+  {
+   "id": "acad",
+   "name": "Academics and Tarbiyah"
+  },
+  {
+   "id": "people",
+   "name": "People and HR"
+  },
+  {
+   "id": "brand",
+   "name": "Brand rollout"
+  },
+  {
+   "id": "admit",
+   "name": "Admissions and marketing"
+  },
+  {
+   "id": "tech",
+   "name": "Technology and systems"
+  },
+  {
+   "id": "ops",
+   "name": "Operations and safety"
+  },
+  {
+   "id": "parents",
+   "name": "Parents and community"
+  },
+  {
+   "id": "year1",
+   "name": "First year and growth"
+  }
+ ],
+ "tasks": [
+  {
+   "id": "strategy-01",
+   "ws": "strategy",
+   "title": "Brand name, logo and identity",
+   "note": "Adabury School; Ghanta Ghar crest approved.",
+   "owner": "Founder",
+   "due": "2026-11",
+   "pri": "High",
+   "status": "Done",
+   "claude": true
+  },
+  {
+   "id": "strategy-02",
+   "ws": "strategy",
+   "title": "Feasibility study, financial model and investor deck",
+   "note": "Base case: profit from Year 3, payback Year 8, peak need PKR 20.8 crore.",
+   "owner": "Founder",
+   "due": "2026-11",
+   "pri": "High",
+   "status": "Done",
+   "claude": true
+  },
+  {
+   "id": "strategy-03",
+   "ws": "strategy",
+   "title": "Update the model with real salaries from the Karachi branches",
+   "note": "Replace the assumed PKR 75,000 average teacher salary.",
+   "owner": "Founder",
+   "due": "2026-12",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "strategy-04",
+   "ws": "strategy",
+   "title": "Confirm competitor fees by calling Beaconhouse, LGS and Roots Faisalabad",
+   "note": "Published figures come from unofficial guides.",
+   "owner": "Founder",
+   "due": "2026-12",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "strategy-05",
+   "ws": "strategy",
+   "title": "Approve the 2028 fee schedule",
+   "note": "Proposed PKR 19,500 / 23,000 / 27,500 a month, plus admission and annual charges.",
+   "owner": "Founder",
+   "due": "2027-01",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "strategy-06",
+   "ws": "strategy",
+   "title": "Choose the funding plan for the PKR 10.8 crore gap",
+   "note": "Ijarah for equipment, landlord fit-out, stepped rent, partner or bank facility.",
+   "owner": "Founder",
+   "due": "2027-01",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "strategy-07",
+   "ws": "strategy",
+   "title": "Get Ijarah quotes for AC, solar and IT from two Islamic banks",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2027-03",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "strategy-08",
+   "ws": "strategy",
+   "title": "Open the school's bank accounts and a fee-collection account",
+   "note": "",
+   "owner": "Founder",
+   "due": "2027-02",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "strategy-09",
+   "ws": "strategy",
+   "title": "Set the year-by-year budget and approval limits",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2027-04",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "strategy-10",
+   "ws": "strategy",
+   "title": "Choose an accounting system and chart of accounts",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2027-06",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "strategy-11",
+   "ws": "strategy",
+   "title": "Insurance: property, public liability, student accident",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2028-02",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "legal-01",
+   "ws": "legal",
+   "title": "Confirm the legal structure with a tax adviser",
+   "note": "Private limited company, AOP or Section 42 non-profit.",
+   "owner": "Founder",
+   "due": "2026-12",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "legal-02",
+   "ws": "legal",
+   "title": "Register the company with SECP, NTN with FBR",
+   "note": "",
+   "owner": "Founder",
+   "due": "2027-01",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "legal-03",
+   "ws": "legal",
+   "title": "File trademarks for the Adabury name and crest with IPO Pakistan",
+   "note": "Name and crest, in classes for education and printed matter.",
+   "owner": "Founder",
+   "due": "2027-01",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "legal-04",
+   "ws": "legal",
+   "title": "Register domains (adabury.pk, adabury.com) and apply for adabury.edu.pk",
+   "note": ".edu.pk needs PKNIC approval once registered.",
+   "owner": "Founder",
+   "due": "2026-12",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "legal-05",
+   "ws": "legal",
+   "title": "Reserve @adaburyschool on Instagram, Facebook, YouTube, TikTok, WhatsApp Business",
+   "note": "",
+   "owner": "Admissions",
+   "due": "2026-12",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "legal-06",
+   "ws": "legal",
+   "title": "Appoint the Board of Governors",
+   "note": "Founder (chair), 2 educators, a chartered accountant, a Shariah scholar; parent from Year 2.",
+   "owner": "Founder",
+   "due": "2027-03",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "legal-07",
+   "ws": "legal",
+   "title": "Appoint the Shariah and Tarbiyah advisory council",
+   "note": "",
+   "owner": "Founder",
+   "due": "2027-04",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "legal-08",
+   "ws": "legal",
+   "title": "Board charter, committee terms and meeting calendar",
+   "note": "",
+   "owner": "Board",
+   "due": "2027-04",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "legal-09",
+   "ws": "legal",
+   "title": "Policy pack: admissions and fees, safeguarding, conduct, uniform, complaints, data protection, health and safety",
+   "note": "",
+   "owner": "Principal",
+   "due": "2027-11",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "legal-10",
+   "ws": "legal",
+   "title": "Staff employment contract and staff handbook",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2027-10",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "legal-11",
+   "ws": "legal",
+   "title": "Parent agreement: fees, refunds, photo consent, code of conduct",
+   "note": "",
+   "owner": "Principal",
+   "due": "2027-08",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "site-01",
+   "ws": "site",
+   "title": "Shortlist 3-5 buildings of 6-8 kanal on the Canal Road belt",
+   "note": "Two separate entrances, off-road drop-off, room for 36 classrooms.",
+   "owner": "Founder",
+   "due": "2027-03",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "site-02",
+   "ws": "site",
+   "title": "Building due diligence: title, FDA approval for school use, structure, power",
+   "note": "",
+   "owner": "Consultant",
+   "due": "2027-04",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "site-03",
+   "ws": "site",
+   "title": "Negotiate the 10-year lease",
+   "note": "Capped increases, rent-free fit-out months, stepped rent, landlord fit-out, first right to buy.",
+   "owner": "Founder",
+   "due": "2027-05",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "site-04",
+   "ws": "site",
+   "title": "Sign the lease",
+   "note": "",
+   "owner": "Founder",
+   "due": "2027-06",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "site-05",
+   "ws": "site",
+   "title": "Architect: two-block layout, prayer halls, labs, washrooms, accessibility",
+   "note": "",
+   "owner": "Consultant",
+   "due": "2027-06",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "site-06",
+   "ws": "site",
+   "title": "Fit-out tender and contractor selection",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2027-07",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "site-07",
+   "ws": "site",
+   "title": "Fit-out works (phase 1: Grades 3-9)",
+   "note": "",
+   "owner": "Contractor",
+   "due": "2027-12",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "site-08",
+   "ws": "site",
+   "title": "Air conditioning and solar installation",
+   "note": "",
+   "owner": "Contractor",
+   "due": "2027-12",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "site-09",
+   "ws": "site",
+   "title": "Science and computer labs (one each per block)",
+   "note": "",
+   "owner": "Contractor",
+   "due": "2028-02",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "site-10",
+   "ws": "site",
+   "title": "Furniture, smart boards and library fit-out",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2028-02",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "site-11",
+   "ws": "site",
+   "title": "Signage production and installation (gate, facade, reception, wayfinding)",
+   "note": "Artwork ready in brand/signage.",
+   "owner": "Bursar",
+   "due": "2028-02",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "site-12",
+   "ws": "site",
+   "title": "Phase 2 fit-out for Grades 10-11 and second sections",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2029-02",
+   "pri": "Low",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "reg-01",
+   "ws": "reg",
+   "title": "Hire a local registration consultant",
+   "note": "",
+   "owner": "Founder",
+   "due": "2027-03",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "reg-02",
+   "ws": "reg",
+   "title": "Register the school with the Punjab education authorities (District Education Authority Faisalabad)",
+   "note": "",
+   "owner": "Consultant",
+   "due": "2027-10",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "reg-03",
+   "ws": "reg",
+   "title": "Apply to become a Cambridge International school",
+   "note": "Approval can take several months; needs the building and leadership in place.",
+   "owner": "Principal",
+   "due": "2027-07",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "reg-04",
+   "ws": "reg",
+   "title": "Confirm the current Punjab rule on annual fee increases",
+   "note": "",
+   "owner": "Consultant",
+   "due": "2027-03",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "reg-05",
+   "ws": "reg",
+   "title": "Fire safety, building safety and health certificates",
+   "note": "",
+   "owner": "Consultant",
+   "due": "2028-02",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "reg-06",
+   "ws": "reg",
+   "title": "Register staff with EOBI and Punjab social security",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2027-12",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "reg-07",
+   "ws": "reg",
+   "title": "Cambridge exam centre approval (for Checkpoint and O Level)",
+   "note": "",
+   "owner": "Principal",
+   "due": "2029-01",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "acad-01",
+   "ws": "acad",
+   "title": "Curriculum map Grades 3-11: Cambridge plus Punjab requirements (Urdu, Islamiyat, Pakistan Studies)",
+   "note": "",
+   "owner": "Principal",
+   "due": "2027-10",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "acad-02",
+   "ws": "acad",
+   "title": "Tarbiyah framework: Quran, Arabic, Seerah, six values, mentoring",
+   "note": "",
+   "owner": "Head of Tarbiyah",
+   "due": "2027-11",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "acad-03",
+   "ws": "acad",
+   "title": "Finalise the six character values and their rubrics",
+   "note": "Adab, Amanah, Ihsan, Sabr, Shukr, Khidmah (proposed).",
+   "owner": "Head of Tarbiyah",
+   "due": "2027-10",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "acad-04",
+   "ws": "acad",
+   "title": "Optional Hifz track: model, timings, teachers",
+   "note": "",
+   "owner": "Head of Tarbiyah",
+   "due": "2027-12",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "acad-05",
+   "ws": "acad",
+   "title": "Timetable for both blocks, including Zuhr and Tarbiyah periods",
+   "note": "",
+   "owner": "Principal",
+   "due": "2028-02",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "acad-06",
+   "ws": "acad",
+   "title": "Choose textbooks and resources; book list for parents",
+   "note": "",
+   "owner": "Principal",
+   "due": "2027-12",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "acad-07",
+   "ws": "acad",
+   "title": "Assessment policy: entry tests, termly exams, Character Record",
+   "note": "",
+   "owner": "Principal",
+   "due": "2027-11",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "acad-08",
+   "ws": "acad",
+   "title": "Entry assessment papers for Grades 3-9",
+   "note": "",
+   "owner": "Principal",
+   "due": "2027-09",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "acad-09",
+   "ws": "acad",
+   "title": "Schemes of work for the first term",
+   "note": "",
+   "owner": "Coordinators",
+   "due": "2028-03",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "acad-10",
+   "ws": "acad",
+   "title": "Library: starter collection in English, Urdu and Islamic books",
+   "note": "",
+   "owner": "Principal",
+   "due": "2028-02",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "acad-11",
+   "ws": "acad",
+   "title": "Co-curricular plan: clubs, debating, sports, service learning, houses",
+   "note": "",
+   "owner": "Principal",
+   "due": "2028-02",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "acad-12",
+   "ws": "acad",
+   "title": "Student support: counselling and learning support approach",
+   "note": "",
+   "owner": "Principal",
+   "due": "2028-01",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "people-01",
+   "ws": "people",
+   "title": "Organisation chart and job descriptions for every role",
+   "note": "",
+   "owner": "Founder",
+   "due": "2027-03",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "people-02",
+   "ws": "people",
+   "title": "Salary bands and benefits",
+   "note": "",
+   "owner": "Founder",
+   "due": "2027-04",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "people-03",
+   "ws": "people",
+   "title": "Recruit the Principal",
+   "note": "Cambridge leadership experience; starts November 2027.",
+   "owner": "Founder",
+   "due": "2027-08",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "people-04",
+   "ws": "people",
+   "title": "Recruit the Head of Girls' Block and Head of Boys' Block",
+   "note": "",
+   "owner": "Principal",
+   "due": "2027-10",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "people-05",
+   "ws": "people",
+   "title": "Recruit the Head of Tarbiyah",
+   "note": "",
+   "owner": "Founder",
+   "due": "2027-10",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "people-06",
+   "ws": "people",
+   "title": "Recruit the Bursar and admissions officers",
+   "note": "",
+   "owner": "Principal",
+   "due": "2027-09",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "people-07",
+   "ws": "people",
+   "title": "Recruit about 29 teachers (more women for the girls' block)",
+   "note": "Advertise from November 2027; include Lahore with relocation support.",
+   "owner": "Principal",
+   "due": "2028-01",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "people-08",
+   "ws": "people",
+   "title": "Recruit support staff: guards, cleaners, nurses, lab assistants",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2028-02",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "people-09",
+   "ws": "people",
+   "title": "Teacher interview tasks and demonstration-lesson rubric",
+   "note": "",
+   "owner": "Principal",
+   "due": "2027-10",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "people-10",
+   "ws": "people",
+   "title": "Two-week induction and Cambridge training before opening",
+   "note": "",
+   "owner": "Principal",
+   "due": "2028-03",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "people-11",
+   "ws": "people",
+   "title": "Staff appraisal and professional development plan",
+   "note": "",
+   "owner": "Principal",
+   "due": "2028-04",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "people-12",
+   "ws": "people",
+   "title": "Safe recruitment: police checks and references for every staff member",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2028-03",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "brand-01",
+   "ws": "brand",
+   "title": "Uniform design (no tie; compulsory hijab for girls)",
+   "note": "",
+   "owner": "Founder",
+   "due": "2026-11",
+   "pri": "High",
+   "status": "Done",
+   "claude": true
+  },
+  {
+   "id": "brand-02",
+   "ws": "brand",
+   "title": "Stationery design",
+   "note": "",
+   "owner": "Founder",
+   "due": "2026-11",
+   "pri": "Medium",
+   "status": "Done",
+   "claude": true
+  },
+  {
+   "id": "brand-03",
+   "ws": "brand",
+   "title": "Signage design",
+   "note": "",
+   "owner": "Founder",
+   "due": "2026-11",
+   "pri": "Medium",
+   "status": "Done",
+   "claude": true
+  },
+  {
+   "id": "brand-04",
+   "ws": "brand",
+   "title": "Social media templates and playbook",
+   "note": "",
+   "owner": "Founder",
+   "due": "2026-11",
+   "pri": "Medium",
+   "status": "Done",
+   "claude": true
+  },
+  {
+   "id": "brand-05",
+   "ws": "brand",
+   "title": "Fill real contact details; print-ready stationery PDFs and Word templates",
+   "note": "",
+   "owner": "Admissions",
+   "due": "2027-07",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "brand-06",
+   "ws": "brand",
+   "title": "Choose the uniform supplier: samples, prices, sizes, school shop",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2027-10",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "brand-07",
+   "ws": "brand",
+   "title": "Real photo shoot to replace the AI visuals",
+   "note": "Once uniforms and the building are ready.",
+   "owner": "Admissions",
+   "due": "2028-04",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "brand-08",
+   "ws": "brand",
+   "title": "Brand guidelines handbook for staff and printers",
+   "note": "",
+   "owner": "Admissions",
+   "due": "2027-06",
+   "pri": "Low",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "admit-01",
+   "ws": "admit",
+   "title": "Website: home, Cambridge and Tarbiyah, fees, admissions form, contact",
+   "note": "",
+   "owner": "Admissions",
+   "due": "2027-08",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "admit-02",
+   "ws": "admit",
+   "title": "Prospectus (print and PDF)",
+   "note": "",
+   "owner": "Admissions",
+   "due": "2027-08",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "admit-03",
+   "ws": "admit",
+   "title": "Admissions process: enquiry, campus visit, entry test, interview, offer",
+   "note": "",
+   "owner": "Admissions",
+   "due": "2027-07",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "admit-04",
+   "ws": "admit",
+   "title": "Founding-family offer and sibling discount rules",
+   "note": "",
+   "owner": "Founder",
+   "due": "2027-07",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "admit-05",
+   "ws": "admit",
+   "title": "Launch marketing plan and budget (PKR 1.5 crore)",
+   "note": "",
+   "owner": "Admissions",
+   "due": "2027-07",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "admit-06",
+   "ws": "admit",
+   "title": "Admissions open: billboards, digital ads, WhatsApp campaign",
+   "note": "",
+   "owner": "Admissions",
+   "due": "2027-09",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "admit-07",
+   "ws": "admit",
+   "title": "Open days: three rounds, September 2027 to January 2028",
+   "note": "",
+   "owner": "Principal",
+   "due": "2028-01",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "admit-08",
+   "ws": "admit",
+   "title": "Enquiry tracker (CRM) and weekly admissions report",
+   "note": "",
+   "owner": "Admissions",
+   "due": "2027-08",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "admit-09",
+   "ws": "admit",
+   "title": "Target: 300 students confirmed with deposits",
+   "note": "Base case Year 1. Every 50 extra students improves funding by about PKR 1.5-2 crore.",
+   "owner": "Admissions",
+   "due": "2028-02",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "admit-10",
+   "ws": "admit",
+   "title": "Referral programme with community and mosque networks",
+   "note": "",
+   "owner": "Admissions",
+   "due": "2027-10",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "admit-11",
+   "ws": "admit",
+   "title": "Launch PR: press release, founder interview, launch event",
+   "note": "",
+   "owner": "Founder",
+   "due": "2027-09",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "tech-01",
+   "ws": "tech",
+   "title": "School management system: admissions, attendance, fees, report cards",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2027-09",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "tech-02",
+   "ws": "tech",
+   "title": "Fee collection: bank challans, online payment, receipts",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2028-01",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "tech-03",
+   "ws": "tech",
+   "title": "Parent app or WhatsApp Business broadcast setup",
+   "note": "",
+   "owner": "Admissions",
+   "due": "2028-02",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "tech-04",
+   "ws": "tech",
+   "title": "Campus network, Wi-Fi, CCTV and access control",
+   "note": "",
+   "owner": "IT officer",
+   "due": "2028-02",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "tech-05",
+   "ws": "tech",
+   "title": "Email and document system for staff (Google Workspace for Education or Microsoft 365)",
+   "note": "",
+   "owner": "IT officer",
+   "due": "2027-11",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "tech-06",
+   "ws": "tech",
+   "title": "Student ID cards with QR codes for gate attendance",
+   "note": "Design ready in brand/stationery.",
+   "owner": "IT officer",
+   "due": "2028-03",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "ops-01",
+   "ws": "ops",
+   "title": "Transport contractor: routes, Adabury-branded vans, female attendants, safety checks",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2028-01",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "ops-02",
+   "ws": "ops",
+   "title": "Security plan: guards, visitor policy, separate block entrances",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2028-02",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "ops-03",
+   "ws": "ops",
+   "title": "Health room and nurse in each block; first-aid training",
+   "note": "",
+   "owner": "Principal",
+   "due": "2028-03",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "ops-04",
+   "ws": "ops",
+   "title": "Canteen or lunch policy (healthy food)",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2028-03",
+   "pri": "Low",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "ops-05",
+   "ws": "ops",
+   "title": "Emergency plans: fire drill, heat, earthquake, lockdown",
+   "note": "",
+   "owner": "Principal",
+   "due": "2028-03",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "ops-06",
+   "ws": "ops",
+   "title": "Cleaning and maintenance schedule",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2028-03",
+   "pri": "Low",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "ops-07",
+   "ws": "ops",
+   "title": "School calendar 2028-29: terms, holidays, exams, events",
+   "note": "",
+   "owner": "Principal",
+   "due": "2028-01",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "parents-01",
+   "ws": "parents",
+   "title": "Parent orientation day and parent handbook",
+   "note": "",
+   "owner": "Principal",
+   "due": "2028-03",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "parents-02",
+   "ws": "parents",
+   "title": "Monthly parent newsletter and Value of the month",
+   "note": "",
+   "owner": "Admissions",
+   "due": "2028-04",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "parents-03",
+   "ws": "parents",
+   "title": "Parent-teacher meetings each term",
+   "note": "",
+   "owner": "Principal",
+   "due": "2028-06",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "parents-04",
+   "ws": "parents",
+   "title": "Parent council (from Year 1) and a parent seat on the Board (Year 2)",
+   "note": "",
+   "owner": "Principal",
+   "due": "2028-09",
+   "pri": "Low",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "parents-05",
+   "ws": "parents",
+   "title": "Community service partners (hospitals, orphanages, mosques)",
+   "note": "",
+   "owner": "Head of Tarbiyah",
+   "due": "2028-08",
+   "pri": "Low",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "year1-01",
+   "ws": "year1",
+   "title": "Opening day: Grades 3-9 in both blocks",
+   "note": "",
+   "owner": "Principal",
+   "due": "2028-04",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "year1-02",
+   "ws": "year1",
+   "title": "Monthly dashboard: enrolment, fee collection, attendance, cash",
+   "note": "",
+   "owner": "Bursar",
+   "due": "2028-05",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "year1-03",
+   "ws": "year1",
+   "title": "Parent and staff satisfaction surveys each term",
+   "note": "",
+   "owner": "Principal",
+   "due": "2028-07",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": true
+  },
+  {
+   "id": "year1-04",
+   "ws": "year1",
+   "title": "Board review against the budget each quarter",
+   "note": "",
+   "owner": "Board",
+   "due": "2028-07",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "year1-05",
+   "ws": "year1",
+   "title": "Admissions for 2029-30: target 450 students",
+   "note": "",
+   "owner": "Admissions",
+   "due": "2028-12",
+   "pri": "High",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "year1-06",
+   "ws": "year1",
+   "title": "First Cambridge Checkpoint results (Grade 8) and review",
+   "note": "",
+   "owner": "Principal",
+   "due": "2029-05",
+   "pri": "Medium",
+   "status": "Not started",
+   "claude": false
+  },
+  {
+   "id": "year1-07",
+   "ws": "year1",
+   "title": "Year 1 review and update of the financial model",
+   "note": "",
+   "owner": "Founder",
+   "due": "2029-03",
+   "pri": "High",
+   "status": "Not started",
+   "claude": true
+  }
+ ]
+}

@@ -1,0 +1,229 @@
+<title>Adabury Launch Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Outfit:wght@400;500;600&display=swap">
+<style>
+/* Layout: a working tracker — summary strip (overall progress, due soon, overdue), filter bar, then one collapsible group per workstream with a progress bar and task rows whose status saves for everyone. */
+:root{
+  --bg:#FAF8F5; --surface:#FFFFFF; --fg:#2A1418; --muted:#6F5F60; --line:#E6DEDA; --accent:#6E1F2F; --gold:#C2A15A; --chip:#F3ECE4;
+  --done:#2E6B3F; --done-bg:#DDEBDD; --prog:#6A4A0A; --prog-bg:#F5E7C6; --block:#7A1A12; --block-bg:#F6D6D3; --todo-bg:#EEE9E6;
+  --display:"Cormorant Garamond", Georgia, serif; --sans:"Outfit","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#140C0E; --surface:#1E1416; --fg:#F2E9E6; --muted:#B4A3A3; --line:#3A2A2D; --accent:#E2BE76; --gold:#E2BE76; --chip:#2A1D20;
+  --done:#9FD8AE; --done-bg:#1F3526; --prog:#F0D08A; --prog-bg:#3A2E14; --block:#FFB3AC; --block-bg:#45201D; --todo-bg:#2A2224; color-scheme:dark } }
+:root[data-theme="dark"]{ --bg:#140C0E; --surface:#1E1416; --fg:#F2E9E6; --muted:#B4A3A3; --line:#3A2A2D; --accent:#E2BE76; --gold:#E2BE76; --chip:#2A1D20;
+  --done:#9FD8AE; --done-bg:#1F3526; --prog:#F0D08A; --prog-bg:#3A2E14; --block:#FFB3AC; --block-bg:#45201D; --todo-bg:#2A2224; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 72px;display:flex;flex-direction:column;gap:24px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(34px,5vw,52px);line-height:1.05;margin:4px 0 6px}
+.lede{color:var(--muted);max-width:72ch;margin:0}
+.strip{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:12px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;min-width:0}
+.tile b{font-family:var(--display);font-size:32px;line-height:1;display:block;font-variant-numeric:tabular-nums}
+.tile span{font-size:13px;color:var(--muted)}
+.tile.warn b{color:var(--block)}
+.bar{height:8px;background:var(--todo-bg);border-radius:99px;overflow:hidden;display:flex;margin-top:10px}
+.bar i{display:block;height:100%}
+.bar .d{background:var(--done)} .bar .p{background:var(--gold)} .bar .k{background:var(--block)}
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px}
+.filters label{font-size:12px;color:var(--muted);display:grid;gap:2px}
+select,input[type=search],input[type=text],input[type=month]{font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);min-width:0}
+input[type=search]{width:220px}
+.chk{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--fg)}
+.sp{flex:1}
+button{font:inherit;font-size:14px;cursor:pointer;border-radius:6px;padding:7px 12px;border:1px solid var(--accent);background:var(--accent);color:var(--bg)}
+button.ghost{background:transparent;color:var(--accent)}
+button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+details.ws{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+details.ws > summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) 220px 70px;gap:16px;align-items:center;padding:14px 16px}
+details.ws > summary::-webkit-details-marker{display:none}
+details.ws > summary h2{margin:0;font-size:17px;font-weight:600;display:flex;gap:10px;align-items:baseline}
+details.ws > summary h2 small{font-size:13px;color:var(--muted);font-weight:400}
+details.ws > summary .pct{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);font-size:14px}
+details.ws[open] > summary{border-bottom:1px solid var(--line)}
+.row{display:grid;grid-template-columns:150px minmax(0,1fr) 130px 90px 74px;gap:14px;align-items:start;padding:11px 16px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:none}
+.row .t{min-width:0}
+.row .t b{font-weight:500}
+.row .t p{margin:2px 0 0;font-size:13px;color:var(--muted)}
+.row .meta{font-size:13px;color:var(--muted)}
+.row .due{font-size:13px;font-variant-numeric:tabular-nums}
+.row .due.late{color:var(--block);font-weight:600}
+.row.done .t b{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line)}
+.st{width:100%;font-weight:500;border-radius:99px;padding:5px 10px}
+.st[data-v="Done"]{background:var(--done-bg);color:var(--done);border-color:transparent}
+.st[data-v="In progress"]{background:var(--prog-bg);color:var(--prog);border-color:transparent}
+.st[data-v="Blocked"]{background:var(--block-bg);color:var(--block);border-color:transparent}
+.st[data-v="Not started"]{background:var(--todo-bg);color:var(--fg);border-color:transparent}
+.pri{display:inline-block;font-size:12px;padding:2px 8px;border-radius:99px;background:var(--chip)}
+.pri.High{background:var(--block-bg);color:var(--block)}
+.cl{display:inline-block;font-size:11px;padding:1px 7px;border-radius:99px;border:1px solid var(--gold);color:var(--accent);margin-left:6px;vertical-align:1px}
+.empty{padding:28px;text-align:center;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:8px}
+.add{display:grid;grid-template-columns:2fr 1.3fr 1fr 1fr 0.8fr auto;gap:10px;align-items:end;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px}
+.add[hidden]{display:none!important}
+.msg{font-size:13px;color:var(--muted);min-height:1.4em}
+.msg.err{color:var(--block)}
+@media (max-width:900px){ .strip{grid-template-columns:1fr 1fr} details.ws > summary{grid-template-columns:1fr 70px} details.ws > summary .bar{grid-column:1/-1;margin:0} .row{grid-template-columns:1fr 110px;grid-template-areas:"t s" "m d"} .row .t{grid-area:t} .row .s{grid-area:s} .row .meta{grid-area:m} .row .due{grid-area:d;text-align:right} .row .p{display:none} .add{grid-template-columns:1fr 1fr} }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Adabury School, Faisalabad · Opening April 2028</span>
+    <h1>Launch plan</h1>
+    <p class="lede">Everything needed for a successful opening and a strong first year, in 12 workstreams. Change a task's status and it saves for everyone on the team. Tasks marked <span class="cl">Claude can draft</span> are ones Claude can prepare a first version of.</p>
+  </header>
+
+  <section class="strip" aria-label="Progress summary">
+    <div class="tile"><b id="sDone">–</b><span id="sDoneL">Loading tasks…</span><div class="bar" id="sBar"></div></div>
+    <div class="tile"><b id="sSoon">–</b><span>Due in the next 90 days</span></div>
+    <div class="tile warn"><b id="sLate">–</b><span>Overdue</span></div>
+    <div class="tile"><b id="sBlock">–</b><span>Blocked</span></div>
+  </section>
+
+  <section class="filters" aria-label="Filters">
+    <label for="fWs">Workstream<select id="fWs"><option value="">All workstreams</option></select></label>
+    <label for="fSt">Status<select id="fSt"><option value="">All statuses</option><option>Not started</option><option>In progress</option><option>Blocked</option><option>Done</option><option value="open">Not done</option></select></label>
+    <label for="fOw">Owner<select id="fOw"><option value="">All owners</option></select></label>
+    <label for="fQ">Search<input id="fQ" type="search" placeholder="Search tasks"></label>
+    <label class="chk" for="fSoon"><input id="fSoon" type="checkbox"> Next 90 days</label>
+    <label class="chk" for="fCl"><input id="fCl" type="checkbox"> Claude can draft</label>
+    <span class="sp"></span>
+    <button type="button" class="ghost" id="addBtn">Add a task</button>
+  </section>
+
+  <form class="add" id="addForm" hidden>
+    <label for="aT">Task<input id="aT" type="text" required placeholder="What needs doing"></label>
+    <label for="aW">Workstream<select id="aW"></select></label>
+    <label for="aO">Owner<input id="aO" type="text" placeholder="Role, e.g. Principal"></label>
+    <label for="aD">Due<input id="aD" type="month"></label>
+    <label for="aP">Priority<select id="aP"><option>High</option><option selected>Medium</option><option>Low</option></select></label>
+    <button type="submit">Save task</button>
+  </form>
+  <div class="msg" id="msg" role="status"></div>
+
+  <div id="groups"><div class="empty" id="empty">Loading the plan…</div></div>
+</div>
+
+<script>
+(() => {
+  const WS = [["strategy","Strategy and funding"],["legal","Legal and governance"],["site","Site and building"],["reg","Registration and accreditation"],["acad","Academics and Tarbiyah"],["people","People and HR"],["brand","Brand rollout"],["admit","Admissions and marketing"],["tech","Technology and systems"],["ops","Operations and safety"],["parents","Parents and community"],["year1","First year and growth"]];
+  const WSN = Object.fromEntries(WS);
+  const STATUSES = ["Not started","In progress","Blocked","Done"];
+  const $ = (id) => document.getElementById(id);
+  const state = { tasks: [], open: new Set(), db: null, writable: true };
+  try { JSON.parse(localStorage.getItem("adb-open") || "[]").forEach((w) => state.open.add(w)); } catch (e) {}
+
+  for (const [id, n] of WS) { $("fWs").add(new Option(n, id)); $("aW").add(new Option(n, id)); }
+
+  const now = new Date();
+  const ym = (d) => d.getFullYear() * 12 + d.getMonth();
+  const nowYm = ym(now);
+  const dueYm = (s) => { const [y, m] = String(s || "").split("-").map(Number); return y ? y * 12 + (m - 1) : Infinity; };
+  const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const fmtDue = (s) => { const v = dueYm(s); return v === Infinity ? "No date" : MONTHS[v % 12] + " " + Math.floor(v / 12); };
+  const isLate = (t) => t.status !== "Done" && dueYm(t.due) < nowYm;
+  const isSoon = (t) => t.status !== "Done" && dueYm(t.due) >= nowYm && dueYm(t.due) <= nowYm + 3;
+
+  function msg(text, err) { const m = $("msg"); m.textContent = text || ""; m.className = "msg" + (err ? " err" : ""); }
+
+  function barHtml(list) {
+    const n = list.length || 1, c = (s) => list.filter((t) => t.status === s).length;
+    return `<i class="d" style="width:${c("Done") / n * 100}%"></i><i class="p" style="width:${c("In progress") / n * 100}%"></i><i class="k" style="width:${c("Blocked") / n * 100}%"></i>`;
+  }
+
+  function render() {
+    const T = state.tasks;
+    const done = T.filter((t) => t.status === "Done").length;
+    $("sDone").textContent = T.length ? `${done} of ${T.length}` : "0";
+    $("sDoneL").textContent = T.length ? `Tasks done (${Math.round(done / T.length * 100)}%)` : "No tasks yet";
+    $("sBar").innerHTML = barHtml(T);
+    $("sSoon").textContent = T.filter(isSoon).length;
+    $("sLate").textContent = T.filter(isLate).length;
+    $("sBlock").textContent = T.filter((t) => t.status === "Blocked").length;
+
+    const owners = [...new Set(T.map((t) => t.owner).filter(Boolean))].sort();
+    const fOw = $("fOw"), keep = fOw.value;
+    fOw.length = 1; owners.forEach((o) => fOw.add(new Option(o, o))); fOw.value = owners.includes(keep) ? keep : "";
+
+    const fw = $("fWs").value, fs = $("fSt").value, fo = $("fOw").value, q = $("fQ").value.trim().toLowerCase(), soon = $("fSoon").checked, cl = $("fCl").checked;
+    const pass = (t) => (!fw || t.ws === fw) && (!fs || (fs === "open" ? t.status !== "Done" : t.status === fs)) && (!fo || t.owner === fo)
+      && (!q || (t.title + " " + (t.note || "") + " " + (t.owner || "")).toLowerCase().includes(q)) && (!soon || isSoon(t)) && (!cl || t.claude);
+    const filtering = fw || fs || fo || q || soon || cl;
+
+    const g = $("groups");
+    g.textContent = "";
+    if (!T.length) { g.innerHTML = '<div class="empty">The plan has no tasks yet. Use "Add a task" to create the first one.</div>'; return; }
+    let shown = 0;
+    for (const [id, name] of WS) {
+      const all = T.filter((t) => t.ws === id);
+      const list = all.filter(pass).sort((a, b) => dueYm(a.due) - dueYm(b.due) || (a.pri === "High" ? -1 : 1));
+      if (!list.length) continue;
+      shown += list.length;
+      const d = document.createElement("details");
+      d.className = "ws"; d.open = filtering || state.open.has(id);
+      d.addEventListener("toggle", () => { d.open ? state.open.add(id) : state.open.delete(id); try { localStorage.setItem("adb-open", JSON.stringify([...state.open])); } catch (e) {} });
+      const doneN = all.filter((t) => t.status === "Done").length;
+      const lateN = all.filter(isLate).length;
+      d.innerHTML = `<summary><h2>${name} <small>${all.length} tasks${lateN ? ` · <span style="color:var(--block)">${lateN} overdue</span>` : ""}</small></h2><div class="bar">${barHtml(all)}</div><span class="pct">${Math.round(doneN / all.length * 100)}% done</span></summary>`;
+      for (const t of list) {
+        const r = document.createElement("div");
+        r.className = "row" + (t.status === "Done" ? " done" : "");
+        const sel = document.createElement("select");
+        sel.className = "st"; sel.id = "st-" + t.id; sel.setAttribute("aria-label", "Status of " + t.title);
+        STATUSES.forEach((s) => sel.add(new Option(s, s)));
+        sel.value = t.status; sel.dataset.v = t.status; sel.disabled = !state.writable;
+        sel.addEventListener("change", () => setStatus(t, sel));
+        const s = document.createElement("div"); s.className = "s"; s.appendChild(sel);
+        const tx = document.createElement("div"); tx.className = "t";
+        const b = document.createElement("b"); b.textContent = t.title; tx.appendChild(b);
+        if (t.claude) { const c = document.createElement("span"); c.className = "cl"; c.textContent = "Claude can draft"; tx.appendChild(c); }
+        if (t.note) { const p = document.createElement("p"); p.textContent = t.note; tx.appendChild(p); }
+        const m = document.createElement("div"); m.className = "meta"; m.textContent = t.owner || "Unassigned";
+        const du = document.createElement("div"); du.className = "due" + (isLate(t) ? " late" : ""); du.textContent = fmtDue(t.due) + (isLate(t) ? " · overdue" : "");
+        const p = document.createElement("div"); p.className = "p"; p.innerHTML = `<span class="pri ${t.pri}">${t.pri || "Medium"}</span>`;
+        r.append(s, tx, m, du, p);
+        d.appendChild(r);
+      }
+      g.appendChild(d);
+    }
+    if (!shown) g.innerHTML = '<div class="empty">No tasks match these filters.</div>';
+  }
+
+  async function setStatus(t, sel) {
+    const v = sel.value;
+    sel.dataset.v = v;
+    if (!state.db) { msg("Changes cannot be saved in this view.", true); sel.value = t.status; return; }
+    try { await state.db.collection("tasks").doc(t.id).update({ status: v, updatedAt: new Date().toISOString() }); msg(`Saved: "${t.title}" is now ${v}.`); }
+    catch (e) { sel.value = t.status; sel.dataset.v = t.status; msg(e && e.code === "permission_denied" ? "You can view this plan but not change it. Ask the owner for edit access." : "Could not save that change. Please try again.", true); }
+  }
+
+  $("addBtn").addEventListener("click", () => { const f = $("addForm"); f.hidden = !f.hidden; if (!f.hidden) $("aT").focus(); });
+  $("addForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!state.db) { msg("Tasks cannot be added in this view.", true); return; }
+    const ws = $("aW").value, title = $("aT").value.trim();
+    if (!title) { msg("Give the task a name first.", true); return; }
+    const id = ws + "-" + Date.now().toString(36);
+    try {
+      await state.db.collection("tasks").doc(id).set({ id, ws, title, note: "", owner: $("aO").value.trim(), due: $("aD").value, pri: $("aP").value, status: "Not started", claude: false, updatedAt: new Date().toISOString() });
+      $("aT").value = ""; $("addForm").hidden = true; state.open.add(ws); msg(`Added "${title}" to ${WSN[ws]}.`);
+    } catch (err) { msg(err && err.code === "permission_denied" ? "You can view this plan but not add tasks." : "Could not add the task. Please try again.", true); }
+  });
+  ["fWs","fSt","fOw","fQ","fSoon","fCl"].forEach((id) => $(id).addEventListener("input", render));
+
+  (async () => {
+    const timer = setTimeout(() => { if (!state.tasks.length) $("groups").innerHTML = '<div class="empty">The plan is taking a while to load. Check your connection or reopen the page.</div>'; }, 10000);
+    const db = window.claude && window.claude.use ? await window.claude.use("db") : null;
+    if (!db) { clearTimeout(timer); state.writable = false; $("groups").innerHTML = '<div class="empty">Sign in to claude.ai to see and update the shared plan.</div>'; $("sDoneL").textContent = "Sign in to load the plan"; $("addBtn").hidden = true; return; }
+    state.db = db;
+    db.collection("tasks").onSnapshot((snap) => {
+      clearTimeout(timer);
+      state.tasks = snap.docs.map((d) => d.data()).filter(Boolean);
+      render();
+    }, (err) => { clearTimeout(timer); $("groups").innerHTML = '<div class="empty">The plan could not be loaded. Reopen the page to try again.</div>'; });
+  })();
+})();
+</script>
